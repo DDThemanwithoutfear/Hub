@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Hub</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
 
+    #menu {
+      padding: 10px;
+      background: #222;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #gameFrame {
+      width: 960px;
+      height: 600px;
+      border: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="menu">
+  <button onclick="loadGame('games/adventure-capitalist/index.html')">
+    AdVenture Capitalist
+  </button>
+
+  <button onclick="loadGame('games/retrobowl/index.html')">
+    Retro Bowl
+  </button>
+</div>
+
+<iframe id="gameFrame"></iframe>
+
+<script>
+function loadGame(path) {
+  document.getElementById("gameFrame").src = path;
+}
+</script>
+
+</body>
+</html>
